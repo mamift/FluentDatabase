@@ -17,7 +17,7 @@ namespace FluentDb.SqlServer
 		{
 			if( string.IsNullOrEmpty( Name ) )
 			{
-				throw new FluentDatabaseSqlServerException( Resource.ColumnNameEmptyErrorMessage );
+				throw new FluentDatabaseSqlServerException( Resources.Strings.ColumnNameEmptyErrorMessage );
 			}
 
 			writer.Write( string.Format( "\t[{0}] {1}", Name, GetSqlDbType() ) );

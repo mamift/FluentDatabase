@@ -36,7 +36,7 @@ namespace FluentDb.SqlServer
 				case ConstraintType.Unique:
 					return "UNIQUE";
 				default:
-					throw new NotSupportedException( string.Format( Resource.ConstraintNotSupportedErrorMessage, Type ) );
+					throw new NotSupportedException( string.Format( Resources.Strings.ConstraintNotSupportedErrorMessage, Type ) );
 			}
 		}
 	}

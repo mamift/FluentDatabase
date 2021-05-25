@@ -21,7 +21,7 @@ namespace FluentDb.Sqlite
 			}
 			if( string.IsNullOrEmpty( Name ) )
 			{
-				throw new FluentDatabaseSqliteException( Resource.ColumnNameEmptyErrorMessage );
+				throw new FluentDatabaseSqliteException( Resources.Strings.ColumnNameEmptyErrorMessage );
 			}
 
 			writer.Write( string.Format( "\t{0} {1}", Name, GetSqlDbType() ) );

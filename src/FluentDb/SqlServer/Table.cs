@@ -3,6 +3,7 @@
 // See LICENSE.txt for details or visit http://www.opensource.org/licenses/ms-pl.html
 
 using System.IO;
+using FluentDb.Resources;
 
 namespace FluentDb.SqlServer
 {
@@ -15,7 +16,7 @@ namespace FluentDb.SqlServer
 		{
 			if( string.IsNullOrEmpty( Name ) )
 			{
-				throw new FluentDatabaseSqlServerException( Resource.TableNameEmptyErrorMessage );
+				throw new FluentDatabaseSqlServerException( Strings.TableNameEmptyErrorMessage );
 			}
 
 			writer.WriteLine( string.Format( "CREATE TABLE [{0}].[{1}]", Schema, Name ) );

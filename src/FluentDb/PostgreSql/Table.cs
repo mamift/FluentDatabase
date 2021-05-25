@@ -15,7 +15,7 @@ namespace FluentDb.PostgreSql
 		{
 			if( string.IsNullOrEmpty( Name ) )
 			{
-				throw new FluentDatabasePostgreSqlException( Resource.TableNameEmptyErrorMessage );
+				throw new FluentDatabasePostgreSqlException( Resources.Strings.TableNameEmptyErrorMessage );
 			}
 
 			writer.Write( "CREATE TABLE " );

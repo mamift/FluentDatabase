@@ -17,7 +17,7 @@ namespace FluentDb.PostgreSql
 		{
 			if( string.IsNullOrEmpty( Name ) )
 			{
-				throw new FluentDatabasePostgreSqlException( Resource.ColumnNameEmptyErrorMessage );
+				throw new FluentDatabasePostgreSqlException( Resources.Strings.ColumnNameEmptyErrorMessage );
 			}
 
 			writer.Write( string.Format( "\t{0} {1}", Name, GetSqlDbType() ) );

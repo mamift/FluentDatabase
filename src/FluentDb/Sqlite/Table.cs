@@ -15,7 +15,7 @@ namespace FluentDb.Sqlite
 		{
 			if( string.IsNullOrEmpty( Name ) )
 			{
-				throw new FluentDatabaseSqliteException( Resource.TableNameEmptyErrorMessage );
+				throw new FluentDatabaseSqliteException( Resources.Strings.TableNameEmptyErrorMessage );
 			}
 
 			writer.WriteLine( "CREATE TABLE {0}", Name );

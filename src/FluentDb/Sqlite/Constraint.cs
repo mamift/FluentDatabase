@@ -31,7 +31,7 @@ namespace FluentDb.Sqlite
 				case ConstraintType.Unique:
 					return " UNIQUE";
 				default:
-					throw new FluentDatabaseSqliteException( string.Format( Resource.ConstraintNotSupportedErrorMessage, Type ) );
+					throw new FluentDatabaseSqliteException( string.Format( Resources.Strings.ConstraintNotSupportedErrorMessage, Type ) );
 			}
 		}
 	}

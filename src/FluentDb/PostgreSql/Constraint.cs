@@ -36,7 +36,7 @@ namespace FluentDb.PostgreSql
 				case ConstraintType.Unique:
 					return "UNIQUE";
 				default:
-					throw new FluentDatabasePostgreSqlException( Resource.ConstraintNotSupportedErrorMessage );
+					throw new FluentDatabasePostgreSqlException( Resources.Strings.ConstraintNotSupportedErrorMessage );
 			}
 		}
 	}
