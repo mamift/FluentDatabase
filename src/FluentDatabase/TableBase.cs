@@ -1,13 +1,12 @@
-﻿#region License
-// Copyright 2009 Josh Close
+﻿// Copyright 2009 Josh Close
 // This file is a part of FluentDatabase and is licensed under the MS-PL
 // See LICENSE.txt for details or visit http://www.opensource.org/licenses/ms-pl.html
-#endregion
+
 using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace FluentDatabase
+namespace FluentDb
 {
 	/// <summary>
 	/// Base class for creating a table. Use this instead

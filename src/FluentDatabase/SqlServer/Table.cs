@@ -1,11 +1,11 @@
-﻿#region License
-// Copyright 2009 Josh Close
+﻿// Copyright 2009 Josh Close
 // This file is a part of FluentDatabase and is licensed under the MS-PL
 // See LICENSE.txt for details or visit http://www.opensource.org/licenses/ms-pl.html
-#endregion
-using System.IO;
 
-namespace FluentDatabase.SqlServer
+using System.IO;
+using FluentDb.Resources;
+
+namespace FluentDb.SqlServer
 {
 	/// <summary>
 	/// SQL Server table.
@@ -16,7 +16,7 @@ namespace FluentDatabase.SqlServer
 		{
 			if( string.IsNullOrEmpty( Name ) )
 			{
-				throw new FluentDatabaseSqlServerException( Resource.TableNameEmptyErrorMessage );
+				throw new FluentDatabaseSqlServerException( Strings.TableNameEmptyErrorMessage );
 			}
 
 			writer.WriteLine( string.Format( "CREATE TABLE [{0}].[{1}]", Schema, Name ) );

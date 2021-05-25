@@ -1,13 +1,12 @@
-﻿#region License
-// Copyright 2009 Josh Close
+﻿// Copyright 2009 Josh Close
 // This file is a part of FluentDatabase and is licensed under the MS-PL
 // See LICENSE.txt for details or visit http://www.opensource.org/licenses/ms-pl.html
-#endregion
+
 using System;
 using System.Data;
 using System.IO;
 
-namespace FluentDatabase.SqlServer
+namespace FluentDb.SqlServer
 {
 	/// <summary>
 	/// SQL Server column.
@@ -18,7 +17,7 @@ namespace FluentDatabase.SqlServer
 		{
 			if( string.IsNullOrEmpty( Name ) )
 			{
-				throw new FluentDatabaseSqlServerException( Resource.ColumnNameEmptyErrorMessage );
+				throw new FluentDatabaseSqlServerException( Resources.Strings.ColumnNameEmptyErrorMessage );
 			}
 
 			writer.Write( string.Format( "\t[{0}] {1}", Name, GetSqlDbType() ) );

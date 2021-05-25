@@ -1,12 +1,10 @@
-﻿#region License
-// Copyright 2009 Josh Close
+﻿// Copyright 2009 Josh Close
 // This file is a part of FluentDatabase and is licensed under the MS-PL
 // See LICENSE.txt for details or visit http://www.opensource.org/licenses/ms-pl.html
-#endregion
-using System;
+
 using System.IO;
 
-namespace FluentDatabase.PostgreSql
+namespace FluentDb.PostgreSql
 {
 	/// <summary>
 	/// PostgreSQL constraint.
@@ -38,7 +36,7 @@ namespace FluentDatabase.PostgreSql
 				case ConstraintType.Unique:
 					return "UNIQUE";
 				default:
-					throw new FluentDatabasePostgreSqlException( Resource.ConstraintNotSupportedErrorMessage );
+					throw new FluentDatabasePostgreSqlException( Resources.Strings.ConstraintNotSupportedErrorMessage );
 			}
 		}
 	}

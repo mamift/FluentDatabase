@@ -1,129 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5BADC500-6BDB-4213-9CC3-3704ACD6D29C}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FluentDatabase</RootNamespace>
-    <AssemblyName>FluentDatabase</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <SignAssembly>false</SignAssembly>
-    <AssemblyOriginatorKeyFile>
-    </AssemblyOriginatorKeyFile>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
-    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\..\build\debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\build\debug\FluentDatabase.XML</DocumentationFile>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>..\..\build\release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\build\release\FluentDatabase.XML</DocumentationFile>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Access\Column.cs" />
-    <Compile Include="Access\Constraint.cs" />
-    <Compile Include="Access\Database.cs" />
-    <Compile Include="Access\FluentDatabaseMySqlException.cs" />
-    <Compile Include="Access\Table.cs" />
-    <Compile Include="ColumnBase.cs" />
-    <Compile Include="ColumnSize.cs" />
-    <Compile Include="ConstraintBase.cs" />
-    <Compile Include="ConstraintType.cs" />
-    <Compile Include="DatabaseBase.cs" />
-    <Compile Include="DatabaseFactory.cs" />
-    <Compile Include="DatabaseType.cs" />
-    <Compile Include="Firebird\Column.cs" />
-    <Compile Include="Firebird\Constraint.cs" />
-    <Compile Include="Firebird\Database.cs" />
-    <Compile Include="Firebird\FluentDatabaseMySqlException.cs" />
-    <Compile Include="Firebird\Table.cs" />
-    <Compile Include="FluentDatabaseException.cs" />
-    <Compile Include="IColumn.cs" />
-    <Compile Include="IConstraint.cs" />
-    <Compile Include="IDatabase.cs" />
-    <Compile Include="ITable.cs" />
-    <Compile Include="MySql\Column.cs" />
-    <Compile Include="MySql\Constraint.cs" />
-    <Compile Include="MySql\Database.cs" />
-    <Compile Include="MySql\FluentDatabaseMySqlException.cs" />
-    <Compile Include="MySql\Table.cs" />
-    <Compile Include="Oracle\Column.cs" />
-    <Compile Include="Oracle\Constraint.cs" />
-    <Compile Include="Oracle\Database.cs" />
-    <Compile Include="Oracle\FluentDatabaseOracleException.cs" />
-    <Compile Include="Oracle\Table.cs" />
-    <Compile Include="PostgreSql\Column.cs" />
-    <Compile Include="PostgreSql\Constraint.cs" />
-    <Compile Include="PostgreSql\Database.cs" />
-    <Compile Include="PostgreSql\FluentDatabasePostgreSqlException.cs" />
-    <Compile Include="PostgreSql\Table.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resource.Designer.cs">
-      <AutoGen>True</AutoGen>
+    <Compile Update="Resources\Strings.Designer.cs">
+      <DependentUpon>Strings.resx</DependentUpon>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Resource.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="Sqlite\Column.cs" />
-    <Compile Include="Sqlite\Constraint.cs" />
-    <Compile Include="Sqlite\Database.cs" />
-    <Compile Include="Sqlite\FluentDatabaseSqliteException.cs" />
-    <Compile Include="Sqlite\Table.cs" />
-    <Compile Include="SqlServer\Column.cs" />
-    <Compile Include="SqlServer\Constraint.cs" />
-    <Compile Include="SqlServer\Database.cs" />
-    <Compile Include="SqlServer\FluentDatabaseSqlServerException.cs" />
-    <Compile Include="SqlServer\Table.cs" />
-    <Compile Include="TableBase.cs" />
   </ItemGroup>
+
   <ItemGroup>
-    <EmbeddedResource Include="Resource.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    <EmbeddedResource Update="Resources\Strings.resx">
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>

@@ -1,11 +1,10 @@
-﻿#region License
-// Copyright 2009 Josh Close
+﻿// Copyright 2009 Josh Close
 // This file is a part of FluentDatabase and is licensed under the MS-PL
 // See LICENSE.txt for details or visit http://www.opensource.org/licenses/ms-pl.html
-#endregion
+
 using System.IO;
 
-namespace FluentDatabase.Sqlite
+namespace FluentDb.Sqlite
 {
 	/// <summary>
 	/// SQLite table.
@@ -16,7 +15,7 @@ namespace FluentDatabase.Sqlite
 		{
 			if( string.IsNullOrEmpty( Name ) )
 			{
-				throw new FluentDatabaseSqliteException( Resource.TableNameEmptyErrorMessage );
+				throw new FluentDatabaseSqliteException( Resources.Strings.TableNameEmptyErrorMessage );
 			}
 
 			writer.WriteLine( "CREATE TABLE {0}", Name );

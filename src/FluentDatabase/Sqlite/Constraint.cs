@@ -1,11 +1,10 @@
-﻿#region License
-// Copyright 2009 Josh Close
+﻿// Copyright 2009 Josh Close
 // This file is a part of FluentDatabase and is licensed under the MS-PL
 // See LICENSE.txt for details or visit http://www.opensource.org/licenses/ms-pl.html
-#endregion
+
 using System.IO;
 
-namespace FluentDatabase.Sqlite
+namespace FluentDb.Sqlite
 {
 	/// <summary>
 	/// SQLite constraint.
@@ -32,7 +31,7 @@ namespace FluentDatabase.Sqlite
 				case ConstraintType.Unique:
 					return " UNIQUE";
 				default:
-					throw new FluentDatabaseSqliteException( string.Format( Resource.ConstraintNotSupportedErrorMessage, Type ) );
+					throw new FluentDatabaseSqliteException( string.Format( Resources.Strings.ConstraintNotSupportedErrorMessage, Type ) );
 			}
 		}
 	}
