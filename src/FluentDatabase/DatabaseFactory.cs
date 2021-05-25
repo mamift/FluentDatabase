@@ -4,7 +4,7 @@
 
 using System;
 
-namespace FluentDb
+namespace FluentDatabase
 {
 	public static class DatabaseFactory
 	{

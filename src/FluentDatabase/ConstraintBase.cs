@@ -4,7 +4,7 @@
 
 using System.IO;
 
-namespace FluentDb
+namespace FluentDatabase
 {
 	/// <summary>
 	/// Base class for creating a constraint. Use this instead

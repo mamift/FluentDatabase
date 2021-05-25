@@ -5,7 +5,7 @@
 using System;
 using System.IO;
 
-namespace FluentDb
+namespace FluentDatabase
 {
 	/// <summary>
 	/// Template for creating a table.

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.IO;
+using FluentDatabase;
 using NUnit.Framework;
 
 namespace FluentDb.Tests

@@ -6,7 +6,7 @@ using System;
 using System.Data;
 using System.IO;
 
-namespace FluentDb.PostgreSql
+namespace FluentDatabase.PostgreSql
 {
 	/// <summary>
 	/// PostgreSQL column.

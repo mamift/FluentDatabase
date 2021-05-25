@@ -4,7 +4,7 @@
 
 using System.IO;
 
-namespace FluentDb.Access
+namespace FluentDatabase.Access
 {
 	public class Table : TableBase
 	{

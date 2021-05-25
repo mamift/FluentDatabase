@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 
-namespace FluentDb
+namespace FluentDatabase
 {
 	/// <summary>
 	/// Base class for creating a column. Use this instead

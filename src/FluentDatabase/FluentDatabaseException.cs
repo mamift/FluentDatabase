@@ -4,7 +4,7 @@
 
 using System;
 
-namespace FluentDb
+namespace FluentDatabase
 {
 	/// <summary>
 	/// Represents errors that occur when using FluentDatabase.

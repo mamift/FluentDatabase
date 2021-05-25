@@ -3,9 +3,9 @@
 // See LICENSE.txt for details or visit http://www.opensource.org/licenses/ms-pl.html
 
 using System.IO;
-using FluentDb.Resources;
+using FluentDatabase.Resources;
 
-namespace FluentDb.SqlServer
+namespace FluentDatabase.SqlServer
 {
 	/// <summary>
 	/// SQL Server table.

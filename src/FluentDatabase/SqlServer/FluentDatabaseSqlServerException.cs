@@ -2,7 +2,7 @@
 // This file is a part of FluentDatabase and is licensed under the MS-PL
 // See LICENSE.txt for details or visit http://www.opensource.org/licenses/ms-pl.html
 
-namespace FluentDb.SqlServer
+namespace FluentDatabase.SqlServer
 {
 	/// <summary>
 	/// Represents errors that occur when creating a SQL Server database.

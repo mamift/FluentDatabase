@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace FluentDb
+namespace FluentDatabase
 {
 	/// <summary>
 	/// Base class for creating a table. Use this instead

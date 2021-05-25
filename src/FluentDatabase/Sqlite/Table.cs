@@ -4,7 +4,7 @@
 
 using System.IO;
 
-namespace FluentDb.Sqlite
+namespace FluentDatabase.Sqlite
 {
 	/// <summary>
 	/// SQLite table.

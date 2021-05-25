@@ -4,7 +4,7 @@
 
 using System.IO;
 
-namespace FluentDb
+namespace FluentDatabase
 {
 	/// <summary>
 	/// Template for a constraint.

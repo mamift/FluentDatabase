@@ -4,7 +4,7 @@
 
 using System.IO;
 
-namespace FluentDb.MySql
+namespace FluentDatabase.MySql
 {
 	public class Column : ColumnBase
 	{

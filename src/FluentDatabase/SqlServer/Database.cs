@@ -4,7 +4,7 @@
 
 using System.IO;
 
-namespace FluentDb.SqlServer
+namespace FluentDatabase.SqlServer
 {
 	/// <summary>
 	/// SQL Server database.

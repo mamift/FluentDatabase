@@ -4,7 +4,7 @@
 
 using System.IO;
 
-namespace FluentDb.PostgreSql
+namespace FluentDatabase.PostgreSql
 {
 	/// <summary>
 	/// PostgreSQL table.

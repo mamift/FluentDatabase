@@ -4,7 +4,7 @@
 
 using System.IO;
 
-namespace FluentDb.Firebird
+namespace FluentDatabase.Firebird
 {
 	public class Database : DatabaseBase
 	{

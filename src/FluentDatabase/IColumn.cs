@@ -6,7 +6,7 @@ using System;
 using System.Data;
 using System.IO;
 
-namespace FluentDb
+namespace FluentDatabase
 {
 	/// <summary>
 	/// Template for creating a column.

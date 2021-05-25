@@ -4,7 +4,7 @@
 
 using System.IO;
 
-namespace FluentDb.Oracle
+namespace FluentDatabase.Oracle
 {
 	public class Database : DatabaseBase
 	{
