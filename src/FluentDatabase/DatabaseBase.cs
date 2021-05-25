@@ -14,47 +14,42 @@ namespace FluentDatabase
 	/// </summary>
 	public abstract class DatabaseBase : IDatabase
 	{
-		protected string Name { get; set; }
-		protected string Schema { get; set; }
-		protected List<ITable> Tables { get; set; }
+		public string Name { get; set; }
+		public string Schema { get; set; } = "dbo";
+		public IList<ITable> Tables { get; set; } = new List<ITable>();
 
 		protected abstract ITable CreateTable();
-		protected abstract void WriteUse( StreamWriter writer );
+		protected abstract void WriteUse(StreamWriter writer);
 
-		protected DatabaseBase()
-		{
-			Tables = new List<ITable>();
-			Schema = "dbo";
-		}
+		protected DatabaseBase() { }
 
-		public IDatabase WithName( string name )
+		public IDatabase WithName(string name)
 		{
 			Name = name;
 			return this;
 		}
 
-		public IDatabase UsingSchema( string schema )
+		public IDatabase UsingSchema(string schema)
 		{
 			Schema = schema;
 			return this;
 		}
 
-		public IDatabase HasTable( Action<ITable> table )
+		public IDatabase HasTable(Action<ITable> table)
 		{
-			var newTable = CreateTable();
-			table.Invoke( newTable );
-			Tables.Add( newTable );
+			ITable newTable = CreateTable();
+			table.Invoke(newTable);
+			Tables.Add(newTable);
 			return this;
 		}
 
-		public void Write( StreamWriter writer )
+		public void Write(StreamWriter writer)
 		{
-			WriteUse( writer );
+			WriteUse(writer);
 			writer.WriteLine();
-			foreach( var table in Tables )
-			{
-				table.UsingSchema( Schema );
-				table.Write( writer );
+			foreach (ITable table in Tables) {
+				table.UsingSchema(Schema);
+				table.Write(writer);
 				writer.WriteLine();
 			}
 		}
