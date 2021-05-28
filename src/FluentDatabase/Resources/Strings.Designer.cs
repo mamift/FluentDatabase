@@ -79,6 +79,15 @@ namespace FluentDatabase.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Not implemented..
+        /// </summary>
+        public static string NotImplementedErrorMessage {
+            get {
+                return ResourceManager.GetString("NotImplementedErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The table name cannot be null or empty..
         /// </summary>
         public static string TableNameEmptyErrorMessage {

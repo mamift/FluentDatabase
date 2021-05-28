@@ -3,14 +3,16 @@
 // See LICENSE.txt for details or visit http://www.opensource.org/licenses/ms-pl.html
 
 using System.IO;
+using FluentDatabase.Resources;
 
 namespace FluentDatabase.MySql
 {
 	public class Column : ColumnBase
 	{
 		protected override void WriteColumn( StreamWriter writer )
-		{
-		}
+        {
+            throw new FluentDatabaseMySqlException(Strings.NotImplementedErrorMessage);
+        }
 
 		protected override IConstraint CreateConstraint()
 		{
